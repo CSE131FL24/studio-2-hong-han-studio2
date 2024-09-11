@@ -55,7 +55,7 @@ public class Ruin {
 				n++;
 			}
 			
-			System.out.println(n);
+			System.out.print(n + " ");
 			if(money>0) {
 				System.out.println("WIN");
 				win ++;
@@ -75,10 +75,15 @@ public class Ruin {
 		}
 		else {
 			double a = (1.0 - winChance)/winChance;
-			double alphastartAmount;
-			double alphawinLimit;
-			for(int i=0;)
-			expectedRuin = (a - )/(1-b);
+			double alphastartAmount=1;
+			double alphawinLimit=1;
+			for(int j=0;j<startAmount;j++) {
+				alphastartAmount = a*alphastartAmount;
+			}
+			for(int j=0;j<winLimit;j++) {
+				alphawinLimit = a*alphawinLimit;
+			}
+			expectedRuin = (alphastartAmount - alphawinLimit)/(1-alphawinLimit);
 			System.out.print(expectedRuin);
 		}
 	}
