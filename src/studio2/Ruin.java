@@ -68,19 +68,17 @@ public class Ruin {
 		System.out.print("Losses: " + lose);
 		System.out.println(" Simulations: " + i);
 		System.out.println("ruin rate from simulation: " + lose/(win + lose));
-		
-		System.out.println(winChance);
-		System.out.println(startAmount);
-		System.out.println(winLimit);
 
 		if(winChance == 0.5) {
 			expectedRuin = 1.0 - ((double)startAmount/winLimit);
 			System.out.print(expectedRuin);
 		}
 		else {
-			double a = (1.0 - startAmount)/startAmount;
-			double b = (1.0-winLimit)/winLimit;
-			expectedRuin = (a - b)/(1-b);
+			double a = (1.0 - winChance)/winChance;
+			double alphastartAmount;
+			double alphawinLimit;
+			for(int i=0;)
+			expectedRuin = (a - )/(1-b);
 			System.out.print(expectedRuin);
 		}
 	}
